@@ -31,9 +31,9 @@ local colors = {
 	bg_statusline1 = '#403E3B',
 	bg_statusline2 = '#474542',
 	bg_statusline3 = '#5E5852',
-	bg_visual_green = '#2E4236',
+	bg_visual_green = '#32473B',
 	bg_visual_red = '#4F211A',
-	bg_visual_blue = '#212F33',
+	bg_visual_blue = '#293B40',
 	bg_visual_yellow = '#66531B',
 	bg_current_word = '#4A4745',
 
