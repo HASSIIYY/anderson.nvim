@@ -2,8 +2,8 @@
 Port of the Anderson color scheme rewritten for NeoVim in Lua.
 [Gruvbox-Material.nvim](https://github.com/WIttyJudge/gruvbox-material.nvim) was taken as a basis.
 
-## Palette
-![AndersonDark](https://github.com/HASSIIYY/anderson.nvim/blob/main/andersonpng.png)
+## 🖼 Palette
+![AndersonDark](https://github.com/HASSIIYY/anderson.nvim/blob/main/palette.png)
 
 
 ## ⚡️ Requirements
