@@ -462,6 +462,32 @@ function highlights.plugin_specific()
     NERDTreeToggleOn = { link = 'Green' },
     NERDTreeUp = { link = 'Grey' },
 
+	-- williamboman/mason.nvim
+	MasonNormal = { bg = colors.bg0, default = true },
+    MasonHeader = { bold = true, fg = colors.bg0, bg = colors.orange, default = true },
+    MasonHeaderSecondary = { bold = true, fg = colors.bg0, bg = colors.blue, default = true },
+
+    MasonHighlight = { fg = colors.blue, default = true },
+    MasonHighlightBlock = { bg = colors.blue, fg = colors.bg0, default = true },
+    MasonHighlightBlockBold = { bg = colors.blue, fg = colors.bg0, bold = true, default = true },
+
+    MasonHighlightSecondary = { fg = colors.orange, default = true },
+    MasonHighlightBlockSecondary = { bg = colors.orange, fg = colors.bg0, default = true },
+    MasonHighlightBlockBoldSecondary = { bg = colors.orange, fg = colors.bg0, bold = true, default = true },
+
+    MasonLink = { link = "MasonHighlight", default = true },
+
+    MasonMuted = { fg = colors.grey0, default = true },
+    MasonMutedBlock = { bg = colors.grey0, fg = colors.bg0, default = true },
+    MasonMutedBlockBold = { bg = colors.grey0, fg = colors.bg0, bold = true, default = true },
+
+    MasonError = { link = "ErrorMsg", default = true },
+    MasonWarning = { link = "WarningMsg", default = true },
+
+    MasonHeading = { bold = true, default = true },
+
+
+
     -- kyazdani42/nvim-tree.lua
     NvimTreeEmptyFolderName = { link = 'Green' },
     NvimTreeExecFile = { link = 'Fg' },
