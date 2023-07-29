@@ -1,8 +1,6 @@
 local utils = require('anderson.utils')
 local highlights = require('anderson.highlights')
 
-local g = vim.g
-
 function set_default_global_options()
   local opts = {
     enable_italic_comment = 1,
@@ -16,8 +14,8 @@ function set_default_global_options()
     -- add prefix
     local key = 'anderson_' .. key
 
-    if vim.g[key] == nil then 
-      vim.g[key] = val 
+    if vim.g[key] == nil then
+      vim.g[key] = val
     end
   end
 end

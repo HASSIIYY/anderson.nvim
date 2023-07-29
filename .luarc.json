@@ -1,0 +1,4 @@
+{
+	"diagnostics.globals": ["vim", "augroup"],
+	"diagnostics.disable": ["lowercase-global"],
+}

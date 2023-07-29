@@ -1,7 +1,6 @@
 local colors = require('anderson.colors')
 
 local g = vim.g
-local opt = vim.opt
 
 highlights = {}
 
@@ -34,7 +33,7 @@ function highlights.custom()
     HintFloat = { fg = colors.green, bg = colors.bg3 }
   }
 
-  if g.gruvbox_material_diagnostic_text_highlight == 1 then
+  if g.anderson_diagnostic_text_highlight == 1 then
     syntax.ErrorText = { fg = colors.bg_visual_red, style = 'undercurl' }
     syntax.WarningText = { fg = colors.bg_visual_yellow, style = 'undercurl' }
     syntax.InfoText = { fg = colors.bg_visual_blue, style = 'undercurl' }
@@ -46,7 +45,7 @@ function highlights.custom()
     syntax.HintText = { style = 'undercurl' }
   end
 
-  if g.gruvbox_material_diagnostic_line_highlight == 1 then
+  if g.anderson_diagnostic_line_highlight == 1 then
     syntax.ErrorLine = { fg = colors.bg_visual_red }
     syntax.WarningLine = { fg = colors.bg_visual_yellow }
     syntax.InfoLine = { fg = colors.bg_visual_blue }
@@ -58,7 +57,7 @@ function highlights.custom()
     vim.cmd('highlight clear HintLine')
   end
 
-  if g.gruvbox_material_diagnostic_virtual_text == 'grey' then
+  if g.anderson_diagnostic_virtual_text == 'grey' then
     syntax.VirtualTextError = { link = 'Grey' }
     syntax.VirtualTextWarning = { link = 'Grey' }
     syntax.VirtualTextInfo = { link = 'Grey' }
@@ -130,7 +129,7 @@ function highlights.syntax()
     Ignore = { fg = colors.grey1 } -- left blank, hidden
   }
 
-  if g.gruvbox_material_enable_italic_comment == 1 then
+  if g.anderson_enable_italic_comment == 1 then
     syntax.Comment = { fg = colors.grey1, style = 'italic' } -- any comments
     syntax.SpecialComment = { fg = colors.grey1, style = 'italic' } -- special things inside a comment
     syntax.Todo = { fg = colors.purple, style = 'italic' } -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
