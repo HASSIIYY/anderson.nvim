@@ -5,7 +5,7 @@ local colors = {
 	green = '#7bb292',
 	aqua = '#88a2a4',
 	blue = '#628b97',
-	purple = '#c7a095',
+	purple = '#7F68AD',
 
 	bg_red = '#be503e',
 	bg_yellow = '#d7ae38',
