@@ -1,45 +1,12 @@
-# Gruvbox Material Scheme
+# Anderson Scheme
+A port of [anderson.vim](https://github.com/tlhr/anderson.vim.git) color scheme for Neovim
+written in Lua.
 
-> [!NOTE]
-> This is a continuation of the original work from WittyJudge:
-> https://github.com/WIttyJudge/gruvbox-material.nvim
+**Palette:**
+![](./assets/palette.png)
 
-A port of [gruvbox-material](https://github.com/sainnhe/gruvbox-material) colorscheme for Neovim
-written in Lua. It does not aim to be 100% compatible with the mentioned repository, but rather
-focuses on keeping the existing scheme stable and to support popular plugins. This colorscheme
-supports both `dark` and `light` themes, based on configured background, and harder or softer
-contrasts.
+**Screenshots:**
 
-**Dark theme:**
-![](./assets/dark-medium.png)
-
-**Light theme:**
-![](./assets/light-medium.png)
-
-<details>
-    <summary>Different contrasts</summary>
-
-| Contrast |             Dark              |             Light              |
-|  :---:   |            :----:             |             :----:             |
-|   Hard   |  ![](./assets/dark-hard.png)  |  ![](./assets/light-hard.png)  |
-|  Medium  | ![](./assets/dark-medium.png) | ![](./assets/light-medium.png) |
-|   Soft   |  ![](./assets/dark-soft.png)  |  ![](./assets/light-soft.png)  |
-
-</details>
-
----
-
-**Table of Contents:**
-
-<!--toc:start-->
-- [Gruvbox Material Scheme](#gruvbox-material-scheme)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage and Configuration](#usage-and-configuration)
-    - [Customization](#customization)
-<!--toc:end-->
-
----
 
 ## Features
 
@@ -60,9 +27,8 @@ contrasts.
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
   - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
   - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-  - And many other plugins you can find [here](./lua/gruvbox-material/highlights.lua#L384)
+  - And many other plugins you can find [here](./lua/extensions/highlighter.lua#L384)
 
-Please feel free to open an issue if you want some features or other plugins to be included.
 
 ## Installation
 
@@ -74,26 +40,19 @@ Install via your favourite package manager:
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'f4z3r/gruvbox-material.nvim'
+Plug 'HASSIIYY/anderson.nvim'
 ```
 
 [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use 'f4z3r/gruvbox-material.nvim'
+use 'HASSIIYY/anderson.nvim'
 ```
 
 [lazy](https://github.com/folke/lazy.nvim)
 
-
 ```lua
-{
-  'f4z3r/gruvbox-material.nvim',
-  name = 'gruvbox-material',
-  lazy = false,
-  priority = 1000,
-  opts = {},
-},
+{ 'HASSIIYY/anderson.nvim' },
 ```
 
 ## Usage and Configuration
@@ -102,9 +61,8 @@ Load the color scheme and define the desired options:
 
 ```lua
 -- values shown are defaults and will be used if not provided
-require('gruvbox-material').setup({
+require('anderson').setup({
   italics = true,             -- enable italics in general
-  contrast = "medium",        -- set contrast, can be any of "hard", "medium", "soft"
   comments = {
     italics = true,           -- enable italic comments
   },
@@ -142,7 +100,7 @@ Where both the options table and the return table are options as described in th
 For instance, in order to disable bold usage on the entire color scheme, you can use
 
 ```lua
-require('gruvbox-material').setup({
+require('anderson').setup({
   customize = function(_, o)
     o.bold = false
     return o
@@ -155,9 +113,9 @@ line number to a bold orange instead of the default grey:
 
 ```lua
 -- get colors from the colorscheme for current background and "medium" contrast
-local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
+local colors = require("anderson.colors").get(vim.o.background, "medium")
 
-require('gruvbox-material').setup({
+require('anderson').setup({
   customize = function(g, o)
     if g == "CursorLineNr" then
       o.link = nil            -- wipe a potential link, which would take precedence over other
