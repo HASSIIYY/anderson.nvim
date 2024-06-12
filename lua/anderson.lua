@@ -1,6 +1,10 @@
-local hl = require("gruvbox-material.highlighter")
-local utils = require("gruvbox-material.utils")
+--[ Connecting extensions ]--
+local hl = require("extensions.highlighter")
+local utils = require("extensions.utils")
 
+
+
+--[ Default Config ]--
 local DEFAULT_CONFIG = {
   italics = true,
   contrast = "medium",
@@ -20,6 +24,9 @@ local DEFAULT_CONFIG = {
   customize = nil,
 }
 
+
+
+--[ Other Functions ]--
 ---Apply defaults to base
 ---@param base table
 ---@param defaults table
@@ -39,9 +46,11 @@ local function apply_defaults(base, defaults)
   return res
 end
 
-local gruvbox = {}
 
-function gruvbox.setup(config)
+
+--[ Main Function ]--
+local M = {}
+function M.setup(config)
   config = config or {}
   local cfg = apply_defaults(config, DEFAULT_CONFIG)
 
@@ -50,13 +59,13 @@ function gruvbox.setup(config)
     vim.cmd("syntax reset")
   end
   vim.o.termguicolors = true
-  vim.g.colors_name = "gruvbox-material"
+  vim.g.colors_name = "anderson"
 
   local highlighter = hl.build(cfg)
-  local groups = require("gruvbox-material.groups").get(cfg.contrast)
+  local groups = require("extensions.groups").get(cfg.contrast)
   for group, options in pairs(groups) do
     highlighter:highlight(group, options)
   end
 end
 
-return gruvbox
+return M

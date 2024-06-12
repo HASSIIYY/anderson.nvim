@@ -1,4 +1,4 @@
-local utils = require("gruvbox-material.utils")
+local utils = require("extensions.utils")
 
 local highlighter = {}
 

@@ -4,7 +4,7 @@ local groups = {}
 ---@param contrast Contrast
 ---@return table
 function groups.get(contrast)
-  local g_colors = require("gruvbox-material.colors")
+  local g_colors = require("extensions.colors")
   local colors = g_colors.get(vim.o.background, contrast)
 
   -- set globals for vim compatibility
