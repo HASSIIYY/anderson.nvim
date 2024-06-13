@@ -1,7 +1,10 @@
+--[ Connecting extensions ]--
 local utils = require("extensions.utils")
 
-local highlighter = {}
 
+
+--[ Other Functions ]--
+---Finding the default highlighter colors
 ---@class StandardHighlighter
 ---@field private overrides (fun(group: string, options: table): table)[]
 local StandardHighlighter = {}
@@ -32,6 +35,10 @@ function StandardHighlighter:highlight(group, options)
   vim.api.nvim_set_hl(0, group, options)
 end
 
+
+
+--[ Main Function ]--
+local highlighter = {}
 highlighter.StandardHighligher = StandardHighlighter
 
 ---build the highlighter based on configuration

@@ -1,11 +1,9 @@
 local groups = {}
 
 ---get highlight groups
----@param contrast Contrast
 ---@return table
-function groups.get(contrast)
-  local g_colors = require("extensions.colors")
-  local colors = g_colors.get(vim.o.background, contrast)
+function groups.get()
+  local colors = require("extensions.colors")
 
   -- set globals for vim compatibility
   local g = vim.g
@@ -58,13 +56,13 @@ function groups.get(contrast)
     VirtualTextInfo = { link = "Info" },
     VirtualTextHint = { link = "Hint" },
 
-    RedSign = { fg = colors.red, bg = colors.bg2 },
-    OrangeSign = { fg = colors.orange, bg = colors.bg2 },
-    YellowSign = { fg = colors.yellow, bg = colors.bg2 },
-    GreenSign = { fg = colors.green, bg = colors.bg2 },
-    AquaSign = { fg = colors.aqua, bg = colors.bg2 },
-    BlueSign = { fg = colors.blue, bg = colors.bg2 },
-    PurpleSign = { fg = colors.purple, bg = colors.bg2 },
+    RedSign = { fg = colors.red },
+    OrangeSign = { fg = colors.orange },
+    YellowSign = { fg = colors.yellow },
+    GreenSign = { fg = colors.green },
+    AquaSign = { fg = colors.aqua },
+    BlueSign = { fg = colors.blue },
+    PurpleSign = { fg = colors.purple },
 
     Type = { fg = colors.yellow }, -- int, long, char, etc.
     Typedef = { fg = colors.red }, -- A typedef
@@ -150,7 +148,7 @@ function groups.get(contrast)
     PmenuThumb = { bg = colors.grey0 }, -- Thumb of the scrollbar
 
     Normal = { fg = colors.fg0, bg = colors.bg0 }, -- normal text
-    NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
+    NormalFloat = { fg = colors.fg1, bg = colors.bg0 },
 
     Question = { fg = colors.yellow }, -- hit-enter prompt and yes/no questions
 
