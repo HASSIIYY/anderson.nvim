@@ -6,6 +6,8 @@ written in Lua.
 ![](./assets/palette.png)
 
 **Screenshots:**
+![](./assets/screenshot_1.png)
+![](./assets/screenshot_2.png)
 
 
 ## Features
@@ -113,7 +115,7 @@ line number to a bold orange instead of the default grey:
 
 ```lua
 -- get colors from the colorscheme for current background and "medium" contrast
-local colors = require("anderson.colors").get(vim.o.background, "medium")
+local colors = require("anderson.colors")
 
 require('anderson').setup({
   customize = function(g, o)
